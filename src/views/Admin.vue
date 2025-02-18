@@ -31,7 +31,7 @@ const logout = () => {
                     </Button>
                 </div>
             </div>
-            <div class="sm:w-4/5 flex flex-col gap-5">
+            <div class="w-full sm:w-4/5 flex flex-col gap-5">
                 <h1 class="font-bold text-3xl text-zinc-600 dark:text-zinc-100 ">Latest Blogs</h1>
                 <BlogList />
             </div>
