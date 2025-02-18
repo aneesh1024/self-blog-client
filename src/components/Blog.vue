@@ -17,7 +17,7 @@ const { blog } = defineProps<{
 const timeAgo = computed(() => getTimeAgo(blog.createdAt))
 
 const formattedContent = computed(() => {
-    const MAX_LENGTH = 460
+    const MAX_LENGTH = 500
     let content = blog.content;
     if (content.length > MAX_LENGTH) {
         content = content.substring(0, MAX_LENGTH) + '...';
