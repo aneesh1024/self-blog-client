@@ -68,7 +68,7 @@ const onSubmit = handleSubmit(async (values) => {
                 <FormItem v-auto-animate>
                     <FormLabel>Email</FormLabel>
                     <FormControl>
-                        <Input type="email" placeholder="shadcn" v-bind="componentField" />
+                        <Input type="email" placeholder="Enter your Email" v-bind="componentField" />
                     </FormControl>
                     <FormDescription>
                         Admin Email.
@@ -82,7 +82,7 @@ const onSubmit = handleSubmit(async (values) => {
                     <FormLabel>Password</FormLabel>
                     <FormControl>
                         <div class="relative">
-                            <Input :type="showPassword ? 'text' : 'password'" placeholder="shadcn"
+                            <Input :type="showPassword ? 'text' : 'password'" placeholder="Enter your password"
                                 v-bind="componentField" />
                             <Button variant="ghost" type="button" size="icon" @click="showPassword = !showPassword"
                                 class="absolute right-0 top-0 h-full rounded-s-none px-3 py-2 cursor-pointer bg-none">
