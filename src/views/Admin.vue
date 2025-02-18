@@ -17,7 +17,7 @@ const logout = () => {
 
 <template>
     <div>
-        <div class="w-[95%] mx-auto flex flex-col items-center justify-center p-4 gap-10">
+        <div class="w-[95%] sm:w-4/5 mx-auto flex flex-col items-center justify-center p-4 gap-10">
             <div class="w-full flex flex-col sm:flex-row gap-4 items-center justify-between">
                 <div class="flex items-end">
                     <Logo />
