@@ -50,7 +50,7 @@ async function onSubmit(values: any) {
     try {
         await blogStore.updateBlog(props.blog._id, values.title, values.content);
         toast({
-            title: 'Blog created successfully',
+            title: 'Blog updated successfully',
         })
         isOpen.value = false
     } catch (err) {
