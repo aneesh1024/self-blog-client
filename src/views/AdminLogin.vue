@@ -20,7 +20,7 @@ import { useForm } from 'vee-validate'
 import { h, ref } from 'vue'
 import * as z from 'zod'
 import { useRouter } from 'vue-router'
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import { Loader2 } from 'lucide-vue-next'
 
 
@@ -42,7 +42,6 @@ const onSubmit = handleSubmit(async (values) => {
     try {
         loading.value = true
         await axios.post('/api/users/login', { email: values.email, password: values.password }, { withCredentials: true });
-
         toast({
             title: 'Logged in successfully',
         })
@@ -51,8 +50,9 @@ const onSubmit = handleSubmit(async (values) => {
     }
     catch (err) {
         loading.value = false
+        const errorMessage = (err as AxiosError).response?.data?.message || 'Login failed';
         toast({
-            title: (err as Error).message
+            title: errorMessage
         })
     }
 })
