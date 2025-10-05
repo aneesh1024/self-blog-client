@@ -50,10 +50,8 @@ const onSubmit = handleSubmit(async (values) => {
     }
     catch (err) {
         loading.value = false
-
-        const errorMessage = (err as AxiosError).response?.data?.message || 'Login failed';
         toast({
-            title: errorMessage
+            title: (err as AxiosError).status === 400 ? 'Unathorized' : (err as AxiosError).message
         })
     }
 })
