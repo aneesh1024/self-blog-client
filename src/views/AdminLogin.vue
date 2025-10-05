@@ -50,6 +50,7 @@ const onSubmit = handleSubmit(async (values) => {
     }
     catch (err) {
         loading.value = false
+
         const errorMessage = (err as AxiosError).response?.data?.message || 'Login failed';
         toast({
             title: errorMessage
